@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+}
+
+#lista-produtos {
+    padding: 0;
+    list-style: none;
+}
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#lista-produtos li {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px #ccc;
+}
+
+#lista-produtos img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
+
+.lista li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.lista img {
+    max-width: 120px;
+}
+
+.botoes-flutuantes {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.botoes-flutuantes button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px #999;
+}
+
+.botoes-flutuantes button:hover {
+    background-color: #0056b3;
+}

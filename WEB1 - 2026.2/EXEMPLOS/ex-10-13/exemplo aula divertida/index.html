@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fake Store | Sua Loja Online</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <a href="#" class="logo">Fake<span>Store.</span></a>
+
+        <div class="acoes-topo">
+            <button id="tema" title="Alternar tema">🌙</button>
+            <button id="abrir-carrinho" title="Abrir carrinho">
+                🛒 <span id="contador-carrinho">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="banner">
+            <div>
+                <p class="subtitulo">SUA EXPERIÊNCIA DE COMPRAS</p>
+                <h1>Encontre seus produtos favoritos.</h1>
+                <p>Explore nossa coleção e descubra algo especial.</p>
+                <a href="#produtos" class="botao-banner">Explorar produtos ↓</a>
+            </div>
+        </section>
+
+        <section id="produtos" class="secao-produtos">
+
+            <div class="titulo-secao">
+                <div>
+                    <p class="subtitulo">NOSSA COLEÇÃO</p>
+                    <h2>Todos os produtos</h2>
+                </div>
+
+                <button id="ver-favoritos" class="botao-secundario">
+                    ❤️ Favoritos
+                </button>
+            </div>
+
+            <div class="ferramentas">
+                <input
+                    type="search"
+                    id="pesquisa"
+                    placeholder="🔎 Buscar produtos..."
+                >
+
+                <select id="categorias">
+                    <option value="todas">Todas as categorias</option>
+                </select>
+
+                <select id="ordenacao">
+                    <option value="padrao">Ordenar por</option>
+                    <option value="menor">Menor preço</option>
+                    <option value="maior">Maior preço</option>
+                    <option value="nome">Nome A–Z</option>
+                </select>
+
+                <button id="alternar-grade" title="Visualização em grade">
+                    ▦
+                </button>
+
+                <button id="alternar-lista" title="Visualização em lista">
+                    ☰
+                </button>
+            </div>
+
+            <p id="quantidade-produtos">Carregando produtos...</p>
+
+            <div id="lista-produtos" class="grade"></div>
+
+            <p id="mensagem-vazia" hidden>
+                Nenhum produto encontrado.
+            </p>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>FakeStore. — Sua próxima descoberta está aqui.</p>
+        <p>Projeto demonstrativo utilizando a Fake Store API.</p>
+    </footer>
+
+    <!-- Painel lateral do carrinho -->
+    <div id="fundo-modal" class="fundo-modal"></div>
+
+    <aside id="painel-carrinho" class="painel-carrinho">
+
+        <div class="topo-carrinho">
+            <h2>🛒 Meu carrinho</h2>
+            <button id="fechar-carrinho">✕</button>
+        </div>
+
+        <div id="itens-carrinho"></div>
+
+        <div class="rodape-carrinho">
+            <h3>Total: <span id="total-carrinho">$ 0.00</span></h3>
+            <button id="limpar-carrinho">Limpar carrinho</button>
+            <button id="finalizar-compra">Finalizar compra</button>
+        </div>
+
+    </aside>
+
+    <!-- Botões flutuantes -->
+    <div class="botoes-flutuantes">
+
+        <button id="botao-topo" title="Voltar ao topo">↑</button>
+
+        <button id="botao-favoritos" title="Ver favoritos">❤️</button>
+
+        <button id="botao-carrinho" title="Abrir carrinho">
+            🛒
+        </button>
+
+    </div>
+
+    <div id="notificacao" class="notificacao"></div>
+
+</body>
+</html>
